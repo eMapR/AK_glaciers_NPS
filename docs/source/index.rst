@@ -17,11 +17,12 @@ Dependencies:
 .. toctree::
    :maxdepth: 2
    :caption: Script examples:
-   
+
    Create training dataset <training_data.rst>
    GlacierCoverNet model <modeling.rst>
    Convert raster to vector <raster_to_vector.rst>
    Postprocess vectors <vector_processing.rst>
+   Error analysis <errors.rst>
    Create figures <figures.rst>
 
 
