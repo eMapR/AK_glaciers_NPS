@@ -1,8 +1,8 @@
-Converting GlacierCoverNet outputs to vector 
-============================================
+Raster to vector conversion and vector 
+=======================================
 
-The default outputs of the GlacierCoverNet model are three class rasters, one for each two year composite in the time series. However, to be useful
-to researchers and the NPS these need to be in vector format. By converting to vector format we can track individual glaciers and how they are 
-changing over time. To do this, we first convert rasters to vectors and then apply a series of steps that deal with labeling the individual glaciers 
-based on existing norms/structures from the Randolph Glacier Inventory (RGI). 
-
+The primary outputs of the GlacierCoverNet model are three class rasters, one for each of the two year composites in the time series (18 composites).
+Each of these three class rasters has classes for supraglaical debris, non-debris covered glaciers and non-glacier cover. To be more useful to the NPS
+partners, researchers and other end users, we convert these rasters to vectors to enable labeling and then tracking of individual glaciers over time. 
+The naming structure for these glaciers is derived from existing naming structures/conventions in the RGI and GLIMS databases. There are a series of 
+steps involved in first making this conversion then doing the labeling and dealing with some of the associated problems that arise. 
