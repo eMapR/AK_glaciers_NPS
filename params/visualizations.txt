@@ -1,0 +1,8 @@
+{
+"input_dir":"/vol/v3/ben_ak/visualizations/final_outputs/clipped/nebesna/overall_area/",
+"base_raster":"/vol/v3/ben_ak/visualizations/base_rasters/nebesna_zone.vrt",
+"rgi":"/vol/v3/ben_ak/vector_files/glacier_outlines/rgi/rgi_wrangall_area_subset_clip.shp",
+"output_dir":"/vol/v3/ben_ak/visualizations/final_outputs/pngs/nebesna/",
+"focus_area":"nebesna_glacier",
+"ancillary_vect":"/vol/v3/ben_ak/visualizations/final_outputs/clipped/nebesna/supraglacial_debris/"
+}

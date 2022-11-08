@@ -1,0 +1,10 @@
+{
+"predicted_raster":"/vol/v3/ben_ak/raster_files/neural_net/outputs/08122021_model_run/stitched/08122021_model_mosaic_1990_full_study_area.vrt", 
+"reference_data":"/vol/v3/ben_ak/excel_files/validation/1989_1990_median_photo_interp_southern_region_count_540.csv", 
+"stat":"max", 
+"classified_dir":"/vol/v3/ben_ak/vector_files/neural_net_data/NSIDC_dataset_submission/final_dataset/overall/", 
+"rgi_dir":"/vol/v3/ben_ak/vector_files/glacier_outlines/rgi_epsg_3338_US_bounds_merged.shp", 
+"output_dir":"/vol/v3/ben_ak/figure_building/08122021_model_run_figures/final_rs_figures/", 
+"pickles":"/vol/v3/ben_ak/pickles/", 
+"model":"08122021"
+}

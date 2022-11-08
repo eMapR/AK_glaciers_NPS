@@ -1,0 +1,6 @@
+{
+"csv_dir":"/vol/v3/ben_ak/excel_files/dl_glacier_train_test/80_20_split/", 
+"split":"80_20", 
+"output_dir":"/vol/v3/ben_ak/figure_building/train_test_split_distributions/", 
+"buff_type":"10km"
+}

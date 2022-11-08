@@ -1,0 +1,12 @@
+{
+"input_dir":"/vol/v3/ben_ak/vector_files/neural_net_data/NSIDC_dataset_submission/final_dataset/AK_glaciers_G10040-V001/debris_free_area/", 
+"output_dir":"/vol/v3/ben_ak/vector_files/neural_net_data/outputs/08122021_model_run/revised_outputs/merged_outputs_debris_free/", 
+"model_version":"08122021", 
+"classified_rasters":"/vol/v3/ben_ak/raster_files/neural_net/outputs/08122021_model_run/GlacierNet_outputs/", 
+"id_rasters": "/vol/v3/ben_ak/raster_files/neural_net/glacier_labeling/all/", 
+"binary_val":"9999", 
+"clip_bounds":"/vol/v3/ben_ak/vector_files/neural_net_data/subset_chunks/subset_12.shp", 
+"vect_dir":"/vol/v3/ben_ak/vector_files/neural_net_data/outputs/08122021_model_run/revised_outputs/unlabeled_debris_free/",
+"attr_file":"/vol/v3/ben_ak/vector_files/glacier_outlines/rgi_epsg_3338_US_bounds_merged.shp", 
+"data_type":"supraglacial_debris"
+}

@@ -1,0 +1,17 @@
+{
+"input_dir":"/vol/v3/ben_ak/raster_files/daymet/08122021_model_run_data/revised_resampling/nn_resampled/",
+"nps_bounds":"/vol/v3/ben_ak/vector_files/boundaries/NPS_Park_Boundaries_epsg_3338_AK_clipped.shp", 
+"ak_bounds":"/vol/v3/ben_ak/vector_files/boundaries/ak_boundary_epsg_3338_dissolve.shp", 
+"glacier_change":"/vol/v3/ben_ak/vector_files/neural_net_data/outputs/08122021_model_run/revised_outputs/merged_outputs_combined/", 
+"debris_cover":"/vol/v3/ben_ak/vector_files/neural_net_data/outputs/08122021_model_run/revised_outputs/merged_outputs_supraglacial_debris/",
+"output_dir":"/vol/v3/ben_ak/excel_files/areal_change_stats/", 
+"canada":"/vol/v3/ben_ak/vector_files/boundaries/canada_epsg_3338.shp", 
+"russia":"/vol/v3/ben_ak/vector_files/boundaries/RUS_adm0_EPSG3338.shp", 
+"ecoregions":"/vol/v3/ben_ak/vector_files/ak_climate_regions/climate_divisions_watershed_based_EPSG_3338.shp", 
+"fig_dir":"/vol/v3/ben_ak/figure_building/08122021_model_run_figures/final_rs_figures/", 
+"pickles":"/vol/v3/ben_ak/pickles/", 
+"model":"08122021", 
+"dem":"/vol/v3/ben_ak/raster_files/daymet/dem/ifsar_resampled_to_match_daymet.tif", 
+"rgi": "/vol/v3/ben_ak/vector_files/glacier_outlines/rgi_epsg_3338_clipped_to_US_southern_region.shp", 
+"daymet_dir":"/vol/v3/ben_ak/raster_files/daymet/daymet_annual_nonbinary/"
+}
