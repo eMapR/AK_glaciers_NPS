@@ -8,18 +8,19 @@ archive and we use the `Landtrendr <https://emapr.github.io/LT-GEE/>`_ algorithm
 from that time series with topographic indices calculated from the `Alaska IfSAR 5m DEM <https://elevation.alaska.gov/>`_ in a convolutional neural network (CNN). We use 
 the CNN to make predictions about glacier and debris covered glacier areas across the state of Alaska for bi or tri annual composites.   
 
-Dependencies: 
-	*numpy
-	*pandas
-	*geopandas
-	*`pytorch <https://pytorch.org/>`_
-	*multiprocessing
-	*subprocess
+Dependencies:   
+	*numpy  
+	*pandas  
+	*geopandas  
+	*`pytorch <https://pytorch.org/>`_  
+	*multiprocessing  
+	*subprocess  
 
 .. toctree::
    :maxdepth: 2
    :caption: Script examples:
    Create training dataset <training_data.rst>
+   GlacierCoverNet <modeling.rst>
    Convert raster to vector <raster_to_vector.rst>
    Postprocess vectors <vector_processing.rst>
    Create figures <figures.rst>
