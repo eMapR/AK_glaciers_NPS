@@ -28,6 +28,10 @@ def plot_time_series_change_wo_mapdate(overall_fn,debris_fn,park,output_dir,c,xi
 	df2 = calc_pct_change(pd.read_csv(debris_fn).sort_values(xi))
 	overall_delta = round(calc_start_end(df1)[1] - calc_start_end(df1)[0],1)
 	debris_delta = round(calc_start_end(df2)[1] - calc_start_end(df2)[0],1)
+	
+	print('overall looks like: ', df1)
+	print('delta is: ',overall_delta)
+
 	fig,(ax1,ax2) = plt.subplots(2,figsize=(8,6),sharex=False) #hardcoded
 	# print('df1 looks like: ',df1)
 	# print('df2 looks like: ',df2)
@@ -73,6 +77,9 @@ def plot_time_series_change_w_mapdate(overall_fn,debris_fn,park,output_dir,mapda
 	df2 = calc_pct_change(pd.read_csv(debris_fn).sort_values(xi))
 	overall_delta = round(calc_start_end(df1)[1] - calc_start_end(df1)[0],1)
 	debris_delta = round(calc_start_end(df2)[1] - calc_start_end(df2)[0],1)
+
+	print('overall looks like: ', df1)
+	print('delta is: ',overall_delta)
 
 	md_gdf = gpd.read_file(mapdate_data)
 	md_gdf['park_area'] = (md_gdf.area)/1000000
@@ -190,9 +197,9 @@ if __name__ == '__main__':
 	overall_files = sorted(glob.glob(overall_dir+'*.csv'))
 	debris_files = sorted(glob.glob(debris_dir+'*.csv'))
 
-	titles = {'aniakchak':'Aniakchak National Monument',
+	titles = {#'aniakchak':'Aniakchak National Monument',
 			  'denali':'Denali National Park/Preserve',
-			  'gates':'Gates of the Arctic',
+			  #'gates':'Gates of the Arctic',
 	          'glacier':'Glacier Bay National Park', 
 			  'katmai':'Katmai National Park', 
 			  'kenai':'Kenai Fjords National Park', 
@@ -203,28 +210,29 @@ if __name__ == '__main__':
 	colors = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#99991e','#a65628','#f781bf']
 
 	color_viewer = dict(zip(list(titles.keys()),colors))
-	print(color_viewer)
 
 	count = 0
 	for file1,file2 in zip(overall_files,debris_files): 
 		#iterate through a dir of csvs with two cols: year and area
 		park_name = os.path.split(file1)[1].split('_')
-		
+		print(park_name)
 		try: 
+			if ('aniakchak' in park_name) | ('gates' in park_name): 
+				continue 
 			park_title = list({k:v for k,v in titles.items() if k in park_name}.values())[0]
 			park_key = list({k:v for k,v in titles.items() if k in park_name}.keys())[0]
 			print(park_key)
-			mapdate_data = [f for f in mapdate_shps if park_key in f][0]
-			print(mapdate_data)
+			# print(mapdate_data)
 		except IndexError: 
 			print('Could not find the park you were looking for.')
-			pass
+			raise
 		try: 
 			pass
 			#if you miss a park then it will throw a nameError
 			if (park_key == 'glacier') | (park_key == 'wrangall'): 
 				plot_time_series_change_wo_mapdate(file1,file2,park_title,output_dir,c=colors[count])
 			else: 
+				mapdate_data = [f for f in mapdate_shps if park_key in f][0]
 				plot_time_series_change_w_mapdate(file1,file2,park_title,output_dir,mapdate_data,c=colors[count])
 			# plot_time_series_change_by_region(file1,file2,park_title,output_dir,mapdate_data,c=colors[count])
 		except NameError: 

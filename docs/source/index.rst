@@ -23,9 +23,8 @@ Dependencies:
    Convert raster to vector <raster_to_vector.rst>
    Postprocess vectors <vector_processing.rst>
    Error analysis <errors.rst>
+   Temperature data <temperature.rst>
    Create figures <figures.rst>
-
-
 
 Indices and tables
 ==================
